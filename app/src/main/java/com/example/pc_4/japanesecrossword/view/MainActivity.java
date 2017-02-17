@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerViewItems;
 
-    private int withNonogram = 5;
+    private int withNonogram = 7;
     private int heighNonogram = 5;
 
     private GridLayoutManager lLayout;
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }*/
 
-        for(int n = 0; n < 25; n++ ){
+        for(int n = 0; n < 49; n++ ){
             allItems.add(new ItemObject(0, "white"));
         }
         //OpenHelperManager.releaseHelper();

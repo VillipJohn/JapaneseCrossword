@@ -24,7 +24,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     public RecyclerViewHolders onCreateViewHolder(ViewGroup parent, int viewType) {
 
 
-        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_every_item, null);
+        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.square_content_item, null);
         RecyclerViewHolders recyclerViewHolders = new RecyclerViewHolders(layoutView);
         return recyclerViewHolders;
     }
@@ -44,9 +44,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
         }
 */
         String number_string = Integer.toString(number);
-        holder.everyItem.setText(number_string);
+        //holder.everyItem.setText(number_string);
 
-        holder.everyItem.setBackgroundResource(R.drawable.ring);
+        //holder.everyItem.setBackgroundResource(R.drawable.ring);
 
         //btn.setClickable(false)
 

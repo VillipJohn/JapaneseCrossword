@@ -3,15 +3,15 @@ package com.example.pc_4.japanesecrossword.view.recyclerview;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.example.pc_4.japanesecrossword.R;
+import com.example.pc_4.japanesecrossword.view.ui.SquareCardView;
 
 
 public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-    public FrameLayout frameLayout;
+    public SquareCardView squareItem;
     public TextView everyItem;
     public int selector = 0;
 
@@ -19,9 +19,9 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
         super(itemView);
         itemView.setOnClickListener(this);
 
-        frameLayout = (FrameLayout) itemView.findViewById(R.id.content_every_item);
+        squareItem = (SquareCardView) itemView.findViewById(R.id.square_card_view);
         //frameLayout.setBackgroundResource(R.drawable.rectangle);
-        everyItem = (TextView)itemView.findViewById(R.id.every_item);
+        everyItem = (TextView)itemView.findViewById(R.id.card_date);
 
     }
 
@@ -30,16 +30,16 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
 
         switch(selector) {
             case 0:
-                everyItem.setBackgroundColor(Color.parseColor("#000000"));
-                everyItem.setTextColor(Color.parseColor("#000000"));
+                squareItem.setBackgroundColor(Color.parseColor("#000000"));
+                //frameLayout.setTextColor(Color.parseColor("#000000"));
                 break;
             case 1:
-                everyItem.setBackgroundColor(Color.parseColor("#123456"));
-                everyItem.setTextColor(Color.parseColor("#000000"));
+                squareItem.setBackgroundResource(R.drawable.x);
+                //frameLayout.setTextColor(Color.parseColor("#000000"));
                 break;
             case 2:
-                everyItem.setBackgroundColor(Color.parseColor("#ffffff"));
-                everyItem.setTextColor(Color.parseColor("#ffffff"));
+                squareItem.setBackgroundColor(Color.parseColor("#ffffff"));
+                //frameLayout.setTextColor(Color.parseColor("#ffffff"));
                 break;
             default:
                 break;
